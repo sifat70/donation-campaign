@@ -13,7 +13,7 @@ const Navbar = () => {
         <div>
             <div className="navbar bg-base-100">
                 <div className="flex-1">
-                    <a className="btn btn-ghost normal-case text-xl"><img src="https://i.ibb.co/LQpkqY4/Logo.png" alt="" /></a>
+                    <a className="btn btn-ghost normal-case text-xl"><img className="h-14" src="https://i.ibb.co/LQpkqY4/Logo.png" alt="" /></a>
                 </div>
                 <div className="flex-none">
                     <ul className="menu menu-horizontal px-1">
