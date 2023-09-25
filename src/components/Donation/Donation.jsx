@@ -3,16 +3,17 @@ import DonationCard from "./DonationCard";
 
 
 const Donation = () => {
-    const [donation, setDonation] = useState()
+    const [donation, setDonation] = useState([])
     const [noFound, setNoFound] = useState(false)
+    const [isShow, setIsShow] = useState(false)
 
     useEffect(() => {
-        const donationItems = JSON.parse(localStorage.getItem('donation'))
+        const donationItems = JSON.parse(localStorage.getItem("donation"))
         if (donationItems) {
             setDonation(donationItems)
         }
         else {
-            setNoFound('no data found');
+            setNoFound("no data found");
         }
     }, [])
 
@@ -20,13 +21,19 @@ const Donation = () => {
         <div>
             {noFound ? <p className="h-[80vh] flex justify-center items-center">{noFound}</p> :
                 <div>
-                    <div className="grid grid-cols-2">
+                    <div className="grid grid-cols-2 gap-5 mt-10">
                         {
-                            donation.map(donate => <DonationCard key={donate.id} donate={donate}></DonationCard>)
+                            isShow ? donation.map(donate => <DonationCard key={donate.id} donate={donate}></DonationCard>)
+                            : 
+                            donation.slice(0,4).map(donate => <DonationCard key={donate.id} donate={donate}></DonationCard>)
                         }
                     </div>
+                    <div className="text-center mt-5">
+                        <button onClick={() => setIsShow(!isShow)} className="btn btn-primary">{isShow ? 'See less' : 'See more'}</button>
+                    </div>
                 </div>
-                }
+
+            }
         </div>
     );
 };

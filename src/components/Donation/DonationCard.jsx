@@ -3,16 +3,17 @@
 import React from 'react';
 
 const DonationCard = ({ donate }) => {
-    const { id, image } = donate
+    const { image, title_name, category_name, price } = donate
     return (
         <div>
             <div className="card card-side bg-base-100 shadow-xl">
                 <figure><img src={image} alt="Movie" /></figure>
                 <div className="card-body">
-                    <h2 className="card-title">New movie is released!</h2>
-                    <p>Click the button to watch on Jetflix app.</p>
-                    <div className="card-actions justify-end">
-                        <button className="btn btn-primary">Watch</button>
+                    <h2 className="card-title">{category_name}</h2>
+                    <p>{title_name}</p>
+                    <p>{price}</p>
+                    <div className="card-actions">
+                        <button className="btn btn-primary">View Details</button>
                     </div>
                 </div>
             </div>

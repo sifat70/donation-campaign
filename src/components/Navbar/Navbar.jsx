@@ -1,12 +1,46 @@
 import { NavLink } from "react-router-dom";
+import './Navbar.css'
 
 
 const Navbar = () => {
 
     const links = <>
-        <li><NavLink to="/">Home</NavLink></li>
+        <li>
+            <NavLink
+                to="/"
+                className={({ isActive, isPending }) =>
+                    isPending ? "pending" : isActive ? "bg-[#FF444A] text-white" : ""
+                }
+            >
+                Home
+            </NavLink>
+
+        </li>
+        <li>
+            <NavLink
+                to="/donation"
+                className={({ isActive, isPending }) =>
+                    isPending ? "pending" : isActive ? "bg-[#FF444A] text-white" : ""
+                }
+            >
+                Donation
+            </NavLink>
+
+        </li>
+        <li>
+            <NavLink
+                to="/statistics"
+                className={({ isActive, isPending }) =>
+                    isPending ? "pending" : isActive ? "bg-[#FF444A] text-white" : ""
+                }
+            >
+                Statistics
+            </NavLink>
+
+        </li>
+        {/* <li><NavLink to="/">Home</NavLink></li>
         <li><NavLink to="/donation">Donation</NavLink></li>
-        <li><NavLink to="/statistics">Statistics</NavLink></li>
+        <li><NavLink to="/statistics">Statistics</NavLink></li> */}
     </>
 
     return (
