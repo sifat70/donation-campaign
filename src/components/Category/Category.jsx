@@ -11,7 +11,7 @@ const Category = ({ category }) => {
                 <button >
                     <div className="card card-compact w-70 h-80 bg-base-100 shadow-xl">
                         <div>
-                            <figure><img className="h-52 w-full" src={image} alt="Shoes" /></figure>
+                            <figure><img className="h-52 w-64" src={image} alt="Shoes" /></figure>
                         </div>
                         <div className="card-body">
                             <h2 className="card-title">{category_name}</h2>
