@@ -14,7 +14,7 @@ const CardCategory = () => {
     },[])
     return (
         <div>
-            <div className="grid grid-cols-4 gap-3 mt-5">
+            <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-3 mt-5">
                 {
                     categories.map(category => <Category key={category.id} category={category}></Category>)
                 }

@@ -5,7 +5,7 @@ const Statistics = () => {
     const data01 = [
         {
             "name": "Group A",
-            "value": 400
+            "value": 1000
         }
     ];
     const data02 = [
@@ -15,14 +15,16 @@ const Statistics = () => {
         }
     ];
     return (
-        <div className="flex items-center justify-center mt-10">
+        <div className="md:flex items-center justify-center mt-10">
             <PieChart width={730} height={250}>
                 
             colors={['red', 'blue', 'green']}
                 <Pie data={data01} dataKey="value" nameKey="name"  fill="#8884d8" />
                 <Pie data={data02} dataKey="value" nameKey="name" fill="#82ca9d" />
             </PieChart>
-
+            <h1 className="flex items-center">Donation <span className="ml-3 h-[10px] w-[100px] bg-[#00C49F]"></span></h1>
+            
+            <h1 className="flex items-center ml-2">Remaining <span className="ml-3 h-[10px] w-[100px] bg-[#FF444A]"></span></h1>
         </div>
     );
 };
