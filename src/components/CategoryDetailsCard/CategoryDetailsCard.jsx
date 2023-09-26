@@ -2,7 +2,7 @@ import swal from "sweetalert";
 
 
 const CategoryDetailsCard = ({ category }) => {
-    const { id, image, title_name, description } = category;
+    const { id, image, title_name, description, text_color } = category;
 
 
     const handleAddToDonation = () => {
@@ -34,7 +34,8 @@ const CategoryDetailsCard = ({ category }) => {
     return (
         <div className="mt-10">
             <img className="w-[100%] h-[70vh] mx-auto" src={image} alt="" />
-            <button onClick={handleAddToDonation} className="btn absolute top-3/4 left-36">Donate $290</button>
+            {/* <div className="h-[80px] w-full bg-slate-800"></div> */}
+            <button style={{backgroundColor: text_color}} onClick={handleAddToDonation} className="btn absolute top-3/4 left-36 text-white">Donate $290</button>
             <h1 className="text-3xl font-bold  mt-5">{title_name}</h1>
             <p className=" mt-5 mb-7">{description}</p>
         </div>

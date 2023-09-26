@@ -29,7 +29,7 @@ const Donation = () => {
                         }
                     </div>
                     <div className="text-center mt-5">
-                        <button onClick={() => setIsShow(!isShow)} className="btn btn-primary">{isShow ? 'See less' : 'See more'}</button>
+                        <button onClick={() => setIsShow(!isShow)} className="btn bg-[#009444] text-white">{isShow ? 'See less' : 'See more'}</button>
                     </div>
                 </div>
 

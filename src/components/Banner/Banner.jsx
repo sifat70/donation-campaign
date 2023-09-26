@@ -2,9 +2,9 @@ import './Banner.css'
 
 const Banner = () => {
     return (
-        <div className="hero h-96" style={{ backgroundImage: 'url()' }}>
+        <div className="hero h-96 mb-16" style={{ backgroundImage: 'url(https://png.pngitem.com/pimgs/s/11-115849_doctors-png-transparent-png.png)' }}>
             {/* https://png.pngitem.com/pimgs/s/11-115849_doctors-png-transparent-png.png */}
-            <div className=""></div>
+            <div className="hero-overlay bg-opacity-0"></div>
             <div className="hero-content text-center text-neutral-content">
                 <div className="">
                     <h1 className="mb-5 text-4xl font-bold text-black">I Grow By Helping People In Need</h1>
